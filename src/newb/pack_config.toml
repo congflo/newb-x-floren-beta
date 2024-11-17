@@ -28,7 +28,7 @@ credits = '''
 define = "EXTRA_MULTILAYER_CLOUDS"
 materials = ["Clouds"]
 description = '''
-More different than Default
+Extra Multilayer Clouds
 '''
 
 [[subpack]]
