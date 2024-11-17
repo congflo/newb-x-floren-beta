@@ -103,7 +103,7 @@
 #define NL_WATER_FOG_FADE         // [toggle] fog fade for water
 //#define NL_WATER_CLOUD_REFLECTION // [toggle] simple clouds/aurora reflection
 //#define NL_WATER_REFL_MASK      // [toggle] fake water reflection mask
-#define NL_WATER_TINT vec3(0.52,0.9,0.45)
+#define NL_WATER_TINT vec3(0.10,0.51,0.90)
 
 /* Underwater */
 #define NL_UNDERWATER_BRIGHTNESS 0.85         // 0.0 dark ~ 3.0 bright
