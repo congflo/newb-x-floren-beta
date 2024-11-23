@@ -103,7 +103,7 @@
 #define NL_WATER_FOG_FADE         // [toggle] fog fade for water
 //#define NL_WATER_CLOUD_REFLECTION // [toggle] simple clouds/aurora reflection
 //#define NL_WATER_REFL_MASK      // [toggle] fake water reflection mask
-#define NL_WATER_TINT vec3(0.10,0.51,0.90)
+#define NL_WATER_TINT vec3(0.83,0.86,0.6)
 
 /* Underwater */
 #define NL_UNDERWATER_BRIGHTNESS 0.85         // 0.0 dark ~ 3.0 bright
@@ -131,7 +131,7 @@
 /* Rounded cloud Settings */
 #define NL_CLOUD2_THICKNESS 2.56789      // 0.5 slim ~ 5.0 fat
 #define NL_CLOUD2_RAIN_THICKNESS 3.5 // 0.5 slim ~ 5.0 fat
-#define NL_CLOUD2_STEPS 16            // 3 low quality ~ 16 high quality
+#define NL_CLOUD2_STEPS 8            // 3 low quality ~ 16 high quality
 #define NL_CLOUD2_SCALE 0.022        // 0.003 large ~ 0.3 tiny
 #define NL_CLOUD2_SHAPE 0.95          // 0.0 round ~ 1.0 box
 #define NL_CLOUD2_DENSITY 100.0       // 1.0 blurry ~ 100.0 sharp
@@ -141,8 +141,8 @@
 /* Aurora settings */
 #define NL_AURORA 4.0           // [toggle] 0.4 dim ~ 4.0 very bright
 #define NL_AURORA_VELOCITY 0.03 // 0.0 static ~ 0.3 very fast
-#define NL_AURORA_SCALE 0.04    // 0.002 large ~ 0.4 tiny
-#define NL_AURORA_WIDTH 0.18    // 0.04 thin line ~ 0.4 thick lines
+#define NL_AURORA_SCALE 0.02    // 0.002 large ~ 0.4 tiny
+#define NL_AURORA_WIDTH 0.3    // 0.04 thin line ~ 0.4 thick lines
 #define NL_AURORA_COL1 vec3(0.1,1.0,0.0)
 #define NL_AURORA_COL2 vec3(0.1,0.0,1.0)
 
@@ -152,11 +152,15 @@
 #define NL_SHOOTING_STAR_DELAY 64.0 // 0.0 no delay ~ 100.0 long time (100 secs)
 
 /* Chunk loading slide in animation */
-#define NL_CHUNK_LOAD_ANIM -5.0 // [toggle] -600.0 fall from top ~ 600.0 rise from bottom
+#define NL_CHUNK_LOAD_ANIM -10.0 // [toggle] -600.0 fall from top ~ 600.0 rise from bottom
 
 /* Sun/Moon */
 #define NL_SUNMOON_ANGLE 30.0 // [toggle] 0.0 no tilt ~ 90.0 tilt of 90 degrees
 #define NL_SUNMOON_SIZE 0.67     // 0.3 tiny ~ 4.0 massive
+//#define NL_SUN_BLOOM
+//#define NL_SUN_BLOOM_COL vec3()
+#define NL_MOON_BLOOM
+#define NL_MOON_BLOOM_COL vec3(0.0,0.15,0.3)
 
 /* Fake godrays during sunrise/sunset */
 #define NL_GODRAY 0.8 // [toggle] 0.1 subtle ~ 0.8 strong
