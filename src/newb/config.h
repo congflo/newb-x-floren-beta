@@ -97,7 +97,7 @@
 
 /* Water */
 #define NL_WATER_TRANSPARENCY 0.6 // 0.0 transparent ~ 1.0 normal
-#define NL_WATER_BUMP 0.1256789        // 0.001 plain ~ 0.2 bumpy water
+#define NL_WATER_BUMP 0.0123456789        // 0.001 plain ~ 0.2 bumpy water
 #define NL_WATER_TEX_OPACITY 0.0  // 0.0 plain water ~ 1.0 vanilla water texture
 #define NL_WATER_WAVE             // [toggle] wave effect
 #define NL_WATER_FOG_FADE         // [toggle] fog fade for water
@@ -158,9 +158,9 @@
 #define NL_SUNMOON_ANGLE 30.0 // [toggle] 0.0 no tilt ~ 90.0 tilt of 90 degrees
 #define NL_SUNMOON_SIZE 0.67     // 0.3 tiny ~ 4.0 massive
 //#define NL_SUN_BLOOM
-//#define NL_SUN_BLOOM_COL vec3()
+//#define NL_SUN_BLOOM_COL vec3(0.98,0.95,0.86)
 #define NL_MOON_BLOOM
-#define NL_MOON_BLOOM_COL vec3(0.0,0.15,0.3)
+#define NL_MOON_BLOOM_COL vec3(0.86,0.96,0.98)
 
 /* Fake godrays during sunrise/sunset */
 #define NL_GODRAY 0.8 // [toggle] 0.1 subtle ~ 0.8 strong
