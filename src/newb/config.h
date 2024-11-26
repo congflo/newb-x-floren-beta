@@ -62,20 +62,20 @@
 
 /* Fog */
 #define NL_FOG 1.0                // [toggle] 0.1 subtle ~ 1.0 blend with sky completely
-#define NL_MIST_DENSITY 0.02      // 0.0 no mist ~ 1.0 misty
+#define NL_MIST_DENSITY 0.005      // 0.0 no mist ~ 1.0 misty
 #define NL_RAIN_MIST_OPACITY 0.12 // [toggle] 0.04 very subtle ~ 0.5 thick rain mist blow
 #define NL_CLOUDY_FOG 0.0         // [toggle] 0.0 subtle - 0.8 dense fog clouds
 
 /* Sky colors - zenith=top, horizon=bottom */
 #define NL_DAY_ZENITH_COL    vec3(0.1,0.45,0.99)
-#define NL_DAY_HORIZON_COL   vec3(0.8,0.8,0.9)
+#define NL_DAY_HORIZON_COL   vec3(1.,1.,1.)
 #define NL_NIGHT_ZENITH_COL  vec3(0.004,0.024,0.04)
-#define NL_NIGHT_HORIZON_COL vec3(0.01,0.06,0.1)
+#define NL_NIGHT_HORIZON_COL vec3(0.0,0.0,0.0)
 #define NL_RAIN_ZENITH_COL   vec3(0.12,0.12,0.12)
 #define NL_RAIN_HORIZON_COL  vec3(0.2,0.2,0.2)
 #define NL_END_ZENITH_COL    vec3(0.11, 0.07, 0.16)
 #define NL_END_HORIZON_COL   vec3(0.86, 0.55, 0.76)
-#define NL_DAWN_ZENITH_COL   vec3(0.36, 0.39, 0.29)
+#define NL_DAWN_ZENITH_COL   vec3(0.1,0.45,0.99)
 #define NL_DAWN_HORIZON_COL  vec3(2.0,0.5,0.0)
 #define NL_DAWN_EDGE_COL     vec3(1.0,0.27,0.0)
 
@@ -87,7 +87,7 @@
 /* Ore glow intensity */
 #define NL_GLOW_TEX 8.0    // 0.4 weak ~ 8.0 bright
 //#define NL_GLOW_SHIMMER    // [toggle] shimmer effect
-#define NL_GLOW_LEAK 0.87 // [toggle] 0.08 subtle ~ 1.0 100% brightness of NL_GLOW_TEX
+#define NL_GLOW_LEAK 0.18 // [toggle] 0.08 subtle ~ 1.0 100% brightness of NL_GLOW_TEX
 
 /* Waving */
 #define NL_PLANTS_WAVE 0.1895    // [toggle] 0.02 gentle ~ 0.4 violent
@@ -97,7 +97,7 @@
 
 /* Water */
 #define NL_WATER_TRANSPARENCY 0.6 // 0.0 transparent ~ 1.0 normal
-#define NL_WATER_BUMP 0.0123456789        // 0.001 plain ~ 0.2 bumpy water
+#define NL_WATER_BUMP 0.1256789        // 0.001 plain ~ 0.2 bumpy water
 #define NL_WATER_TEX_OPACITY 0.0  // 0.0 plain water ~ 1.0 vanilla water texture
 #define NL_WATER_WAVE             // [toggle] wave effect
 #define NL_WATER_FOG_FADE         // [toggle] fog fade for water
@@ -157,13 +157,13 @@
 /* Sun/Moon */
 #define NL_SUNMOON_ANGLE 30.0 // [toggle] 0.0 no tilt ~ 90.0 tilt of 90 degrees
 #define NL_SUNMOON_SIZE 0.67     // 0.3 tiny ~ 4.0 massive
-//#define NL_SUN_BLOOM
-//#define NL_SUN_BLOOM_COL vec3(0.98,0.95,0.86)
+#define NL_SUN_BLOOM
+#define NL_SUN_BLOOM_COL vec3(0.98,0.96,0.98)/5.0
 #define NL_MOON_BLOOM
 #define NL_MOON_BLOOM_COL vec3(0.86,0.96,0.98)
 
 /* Fake godrays during sunrise/sunset */
-#define NL_GODRAY 0.8 // [toggle] 0.1 subtle ~ 0.8 strong
+//#define NL_GODRAY 0.8 // [toggle] 0.1 subtle ~ 0.8 strong
 
 /* Sky reflection */
 //#define NL_GROUND_REFL 0.4       // [toggle] 0.2 slightly reflective ~ 1.0 fully reflect sky 
