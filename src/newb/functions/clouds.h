@@ -128,5 +128,18 @@ vec4 renderAurora(vec3 p, float t, float rain, vec3 FOG_COLOR) {
   return vec4(NL_AURORA*mix(NL_AURORA_COL1,NL_AURORA_COL2,d1),1.0)*d2*mask;
 }
 #endif
+vec3 cloudCol(float dusk, float night, float rain){
+vec3 color = mix(mix(mix(NL_CLOUD_DAY_COL, NL_CLOUD_DAWN_COL, dusk), NL_CLOUD_NIGHT_COL, night), NL_CLOUD_RAIN_COL, rain);
+return color;
+}
+vec4 worldTimeDetection(vec3 v_FogColor, vec3 v_FogControl){
 
+//dynamic time
+ float day = pow(max(min(1.0 - v_FogColor.r * 1.2, 1.0), 0.0), 0.4);
+  float night = pow(max(min(1.0 - v_FogColor.r * 1.5, 1.0), 0.0), 1.2);
+  float dusk = max(v_FogColor.r - v_FogColor.b, 0.0);
+  float rain = mix(smoothstep(0.66, 0.3, v_FogControl.x), 0.0, step(v_FogControl.x, 0.0));
+
+return vec4(dusk, day, night, rain);
+}
 #endif
