@@ -13,7 +13,7 @@ uniform vec4 ViewPositionAndTime;
 
 void main() {
   vec4 color = v_color0;
-  vec4 wt = worldTimeDetection(FogColor.rgb, FogAndDistanceControl.xyz;
+  vec4 wt = worldTimeDetection(FogColor.rgb, FogAndDistanceControl.xyz);
 
   vec3 getCloudCol = cloudCol(wt.x, wt.z, wt.w);
   
