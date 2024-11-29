@@ -15,7 +15,7 @@ void main() {
   vec4 color = v_color0;
   vec4 wt = worldTimeDetection(FogColor.rgb, FogAndDistanceControl.xyz;
 
-  vec3 getCloudCol = cloudCol(wt.x, wt.z, wt.w)
+  vec3 getCloudCol = cloudCol(wt.x, wt.z, wt.w);
   
   #if NL_CLOUD_TYPE == 2
     vec3 vDir = normalize(v_color0.xyz);
