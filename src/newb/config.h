@@ -92,12 +92,12 @@
 /* Waving */
 #define NL_PLANTS_WAVE 0.1895    // [toggle] 0.02 gentle ~ 0.4 violent
 #define NL_LANTERN_WAVE 0.16   // [toggle] 0.05 subtle ~ 0.4 large swing
-#define NL_WAVE_SPEED 1.57      // 0.5 slow wave ~ 5.0 very fast wave
+#define NL_WAVE_SPEED 2.3      // 0.5 slow wave ~ 5.0 very fast wave
 //#define NL_EXTRA_PLANTS_WAVE // [toggle] !dont use! wave using texture coords (1.21.0 vanilla 2048x1024)
 
 /* Water */
 #define NL_WATER_TRANSPARENCY 0.6 // 0.0 transparent ~ 1.0 normal
-#define NL_WATER_BUMP 0.1256789        // 0.001 plain ~ 0.2 bumpy water
+#define NL_WATER_BUMP 0.01256789        // 0.001 plain ~ 0.2 bumpy water
 #define NL_WATER_TEX_OPACITY 0.0  // 0.0 plain water ~ 1.0 vanilla water texture
 #define NL_WATER_WAVE             // [toggle] wave effect
 #define NL_WATER_FOG_FADE         // [toggle] fog fade for water
@@ -138,6 +138,19 @@
 #define NL_CLOUD2_VELOCITY 2.3       // 0.0 static ~ 4.0 very fast
 #define NL_CLOUD2_MULTILAYER       // [toggle] extra cloud layer
 
+/* Clouds Color Setting */
+
+#define NL_CLOUD_BOT_DAY_COL vec3(1.0,1.0,1.0)
+#define NL_CLOUD_BOT_NIGHT_COL vec3(0.004,0.024,0.04)
+#define NL_CLOUD_BOT_RAIN_COL vec3(0.12,0.12,0.12)/2.
+#define NL_CLOUD_BOT_DAWN_COL vec3(1.0,0.68,0.96)
+
+#define NL_CLOUD_DAY_COL vec3(1.0,1.0,1.0)
+#define NL_CLOUD_NIGHT_COL vec3(0.004,0.024,0.04)
+#define NL_CLOUD_RAIN_COL vec3(0.12,0.12,0.12)/2.
+#define NL_CLOUD_DAWN_COL vec3(1.0,0.68,0.96)
+
+
 /* Aurora settings */
 #define NL_AURORA 4.0           // [toggle] 0.4 dim ~ 4.0 very bright
 #define NL_AURORA_VELOCITY 0.03 // 0.0 static ~ 0.3 very fast
@@ -147,7 +160,7 @@
 #define NL_AURORA_COL2 vec3(0.1,0.0,1.0)
 
 /* Shooting star */
-#define NL_SHOOTING_STAR 1.0        // [toggle] 0.2 dim ~ 1.0 bright
+#define NL_SHOOTING_STAR 2.0        // [toggle] 0.2 dim ~ 1.0 bright
 #define NL_SHOOTING_STAR_PERIOD 6.0 // 0.4 fast ~ 12.0 slow (12 secs)
 #define NL_SHOOTING_STAR_DELAY 64.0 // 0.0 no delay ~ 100.0 long time (100 secs)
 
@@ -160,7 +173,7 @@
 #define NL_SUN_BLOOM
 #define NL_SUN_BLOOM_COL vec3(0.98,0.96,0.98)/5.0
 #define NL_MOON_BLOOM
-#define NL_MOON_BLOOM_COL vec3(0.86,0.96,0.98)
+#define NL_MOON_BLOOM_COL vec3(0.86,0.96,0.98)/2.0
 
 /* Fake godrays during sunrise/sunset */
 //#define NL_GODRAY 0.8 // [toggle] 0.1 subtle ~ 0.8 strong
@@ -168,7 +181,7 @@
 /* Sky reflection */
 //#define NL_GROUND_REFL 0.4       // [toggle] 0.2 slightly reflective ~ 1.0 fully reflect sky 
 #define NL_GROUND_RAIN_WETNESS 1.0 // 0.0 no wetness ~ 1.0 fully wet blocks when raining
-#define NL_GROUND_RAIN_PUDDLES 0.7 // 0.0 no puddles ~ 1.0 puddles
+#define NL_GROUND_RAIN_PUDDLES 1.0 // 0.0 no puddles ~ 1.0 puddles
 //#define NL_GROUND_AURORA_REFL    // [toggle] aurora reflection on ground
 
 /* Entity (Actor, ItemInHand) */
