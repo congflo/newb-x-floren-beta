@@ -136,20 +136,7 @@
 #define NL_CLOUD2_SHAPE 0.95          // 0.0 round ~ 1.0 box
 #define NL_CLOUD2_DENSITY 100.0       // 1.0 blurry ~ 100.0 sharp
 #define NL_CLOUD2_VELOCITY 2.3       // 0.0 static ~ 4.0 very fast
-#define NL_CLOUD2_MULTILAYER       // [toggle] extra cloud layer
-
-/* Clouds Color Setting */
-
-#define NL_CLOUD_BOT_DAY_COL vec3(1.0,1.0,1.0)
-#define NL_CLOUD_BOT_NIGHT_COL vec3(0.004,0.024,0.04)
-#define NL_CLOUD_BOT_RAIN_COL vec3(0.12,0.12,0.12)/2.
-#define NL_CLOUD_BOT_DAWN_COL vec3(1.0,0.68,0.96)
-
-#define NL_CLOUD_DAY_COL vec3(1.0,1.0,1.0)
-#define NL_CLOUD_NIGHT_COL vec3(0.004,0.024,0.04)
-#define NL_CLOUD_RAIN_COL vec3(0.12,0.12,0.12)/2.
-#define NL_CLOUD_DAWN_COL vec3(1.0,0.68,0.96)
-
+//#define NL_CLOUD2_MULTILAYER       // [toggle] extra cloud layer
 
 /* Aurora settings */
 #define NL_AURORA 4.0           // [toggle] 0.4 dim ~ 4.0 very bright
