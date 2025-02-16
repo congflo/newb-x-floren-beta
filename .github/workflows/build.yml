@@ -70,7 +70,7 @@ jobs:
     - run: |
         ./build.sh setup
         ./build.sh pack -p ios
-        ./material-updater -t v1.21.20 -o ./build/nxf-ios.zip ./build/pack-ios.zip
+        ./material-updater -t v1-21-20 -o ./build/nxf-ios.zip ./build/pack-ios.zip
     - uses: actions/upload-artifact@v4
       with:
         name: newb-x-ios
