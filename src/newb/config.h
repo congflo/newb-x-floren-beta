@@ -47,8 +47,8 @@
 
 /* Sun/moon light color on terrain */
 #define NL_MORNING_SUN_COL vec3(0.6,0.2,0.0)
-#define NL_NOON_SUN_COL    vec3(0.98,0.69,0.09)
-#define NL_NIGHT_SUN_COL   vec3(0.35,0.35,0.35)
+#define NL_NOON_SUN_COL    vec3(1.00,0.64,0.02)
+#define NL_NIGHT_SUN_COL   vec3(0.15,0.15,0.15)
 
 /* Ambient light on terrain (light that is added everywhere) */
 #define NL_NETHER_AMBIENT vec3(3.0,2.16,1.89)
@@ -61,7 +61,7 @@
 #define NL_END_TORCH_COL        vec3(0.94, 0.33, 0.01)
 
 /* Fog */
-#define NL_FOG 1.0                // [toggle] 0.1 subtle ~ 1.0 blend with sky completely
+#define NL_FOG 1.                // [toggle] 0.1 subtle ~ 1.0 blend with sky completely
 #define NL_MIST_DENSITY 0.005      // 0.0 no mist ~ 1.0 misty
 #define NL_RAIN_MIST_OPACITY 0.12 // [toggle] 0.04 very subtle ~ 0.5 thick rain mist blow
 #define NL_CLOUDY_FOG 0.0         // [toggle] 0.0 subtle - 0.8 dense fog clouds
@@ -90,7 +90,7 @@
 #define NL_GLOW_LEAK 0.18 // [toggle] 0.08 subtle ~ 1.0 100% brightness of NL_GLOW_TEX
 
 /* Waving */
-#define NL_PLANTS_WAVE 0.1895    // [toggle] 0.02 gentle ~ 0.4 violent
+#define NL_PLANTS_WAVE 0.062    // [toggle] 0.02 gentle ~ 0.4 violent
 #define NL_LANTERN_WAVE 0.16   // [toggle] 0.05 subtle ~ 0.4 large swing
 #define NL_WAVE_SPEED 1.35      // 0.5 slow wave ~ 5.0 very fast wave
 #define NL_EXTRA_PLANTS_WAVE // [toggle] !dont use! wave using texture coords (1.21.0 vanilla 2048x1024)
