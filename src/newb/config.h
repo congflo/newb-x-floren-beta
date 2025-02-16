@@ -47,7 +47,7 @@
 
 /* Sun/moon light color on terrain */
 #define NL_MORNING_SUN_COL vec3(0.6,0.2,0.0)
-#define NL_NOON_SUN_COL    vec3(1.0,1.0,1.0)
+#define NL_NOON_SUN_COL    vec3(0.94,0.81,0.60)
 #define NL_NIGHT_SUN_COL   vec3(0.29,0.37,1.0)
 
 /* Ambient light on terrain (light that is added everywhere) */
