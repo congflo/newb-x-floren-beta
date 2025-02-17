@@ -47,7 +47,7 @@
 
 /* Sun/moon light color on terrain */
 #define NL_MORNING_SUN_COL vec3(0.6,0.2,0.0)
-#define NL_NOON_SUN_COL    vec3(1.00,0.64,0.02)
+#define NL_NOON_SUN_COL    vec3(1.00,0.84,0.63)
 #define NL_NIGHT_SUN_COL   vec3(0.15,0.15,0.15)
 
 /* Ambient light on terrain (light that is added everywhere) */
@@ -103,14 +103,14 @@
 #define NL_WATER_FOG_FADE         // [toggle] fog fade for water
 //#define NL_WATER_CLOUD_REFLECTION // [toggle] simple clouds/aurora reflection
 //#define NL_WATER_REFL_MASK      // [toggle] fake water reflection mask
-#define NL_WATER_TINT vec3(0.88,0.92,0.97) //vec3(0.83,0.86,0.6)
+#define NL_WATER_TINT vec3(0.92,0.97,1.00) //vec3(0.83,0.86,0.6)
 
 /* Underwater */
 #define NL_UNDERWATER_BRIGHTNESS 0.85         // 0.0 dark ~ 3.0 bright
 #define NL_CAUSTIC_INTENSITY 5.0             // 0.5 weak ~ 5.0 bright
 #define NL_UNDERWATER_WAVE 0.1               // [toggle] 0.02 subtle ~ 0.6 trippy
 #define NL_UNDERWATER_STREAKS 2.0            // [toggle] 0.8 subtle - 2.0 bright streaks from top
-#define NL_UNDERWATER_TINT vec3(0.83,0.86,0.6) // fog tint color when underwater
+#define NL_UNDERWATER_TINT vec3(0.92,0.97,1.00) // fog tint color when underwater
 
 /* Cloud type */
 #define NL_CLOUD_TYPE 2 // 0:vanilla, 1:soft, 2:rounded
