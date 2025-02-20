@@ -47,6 +47,9 @@ float noise2D(vec2 u) {
 }
 
 // new plants wave type
+const float PI48 = 150.796447372;
+float pi2wt = PI48;
+
 vec3 calcWave(in vec3 pos, in float fm, in float mm, in float ma, in float f0, in float f1, in float f2, in float f3, in float f4, in float f5) {
 
     float magnitude = sin(dot(vec4(pi2wt*fm, pos.x, pos.z, pos.y),vec4(0.5))) * mm + ma;
