@@ -68,7 +68,7 @@ float fbm(vec2 x) {
 	mat2 rot = mat2(cos(0.5), sin(0.5), -sin(0.5), cos(0.50));
 	
 	for(int i=0;i < 10; ++i) {
-		v += a * noise(x);
+		v += a * noise2D(x);
 		//x += frameTimeCounter * 0.02;
 		//shift -= frameTimeCounter * 0.02;
 		x = rot * x * 2.0 + shift;
