@@ -93,7 +93,7 @@
 #define NL_PLANTS_WAVE 0.062    // [toggle] 0.02 gentle ~ 0.4 violent
 #define NL_LANTERN_WAVE 0.16   // [toggle] 0.05 subtle ~ 0.4 large swing
 #define NL_WAVE_SPEED 1.35      // 0.5 slow wave ~ 5.0 very fast wave
-//#define NL_EXTRA_PLANTS_WAVE // [toggle] !dont use! wave using texture coords (1.21.0 vanilla 2048x1024)
+#define NL_EXTRA_PLANTS_WAVE // [toggle] !dont use! wave using texture coords (1.21.0 vanilla 2048x1024)
 
 /* Water */
 #define NL_WATER_TRANSPARENCY 0.6 // 0.0 transparent ~ 1.0 normal
@@ -122,7 +122,7 @@
 #define NL_CLOUD0_MULTILAYER         // [toggle] extra cloud layer
 
 /* Soft cloud settings */
-#define NL_CLOUD1_SCALE vec2(0.016, 0.022) // 0.003 large ~ 0.2 tiny
+#define NL_CLOUD1_SCALE 0.015 //vec2(0.016, 0.022) 0.003 large ~ 0.2 tiny
 #define NL_CLOUD1_DEPTH 1.3                // 0.0 no bump ~ 10.0 large bumps
 #define NL_CLOUD1_SPEED 0.04               // 0.0 static ~ 0.4 fast moving
 #define NL_CLOUD1_DENSITY 0.54             // 0.1 less clouds ~ 0.8 more clouds
@@ -132,9 +132,9 @@
 #define NL_CLOUD2_THICKNESS 2.32      // 0.5 slim ~ 5.0 fat
 #define NL_CLOUD2_RAIN_THICKNESS 3.5 // 0.5 slim ~ 5.0 fat
 #define NL_CLOUD2_STEPS 8            // 3 low quality ~ 16 high quality
-#define NL_CLOUD2_SCALE 0.039        // 0.003 large ~ 0.3 tiny
-#define NL_CLOUD2_SHAPE 0.75          // 0.0 round ~ 1.0 box
-#define NL_CLOUD2_DENSITY 72.5       // 1.0 blurry ~ 100.0 sharp
+#define NL_CLOUD2_SCALE 0.015        // 0.003 large ~ 0.3 tiny
+#define NL_CLOUD2_SHAPE 0.67          // 0.0 round ~ 1.0 box
+#define NL_CLOUD2_DENSITY 42.5       // 1.0 blurry ~ 100.0 sharp
 #define NL_CLOUD2_VELOCITY 1.68       // 0.0 static ~ 4.0 very fast
 //#define NL_CLOUD2_MULTILAYER       // [toggle] extra cloud layer
 
@@ -226,6 +226,14 @@
   #define NL_CLOUD2_DENSITY 100.0
   #define NL_CLOUD2_VELOCITY 2.3
   #define NL_CLOUD2_MULTILAYER
+
+#endif
+
+#ifdef SOFT_CLOUDS
+
+  #undef NL_CLOUD_TYPE
+
+  #define NL_CLOUD_TYPE 1
 
 #endif
 

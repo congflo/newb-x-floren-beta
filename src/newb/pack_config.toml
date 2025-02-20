@@ -10,7 +10,7 @@ description = '''
 authors = ["congchu", "devendrn"]
 url = "https://devendrn.github.io/newb-shader/"
 uuid = "87fe3a36-f221-4cc8-9aa0-1b3fb725ea86" # Use https://www.uuidgenerator.net/version4
-materials = ["Sky", "RenderChunk", "Actor", "LegacyCubemap", "EndSky", "Clouds", "SunMoon", "Weather"]
+materials = ["Sky", "RenderChunk", "Actor", "LegacyCubemap", "EndSky", "Clouds", "SunMoon", "Weather", "ActorGlint", "ItemInHandColor", "ItemInHandColorGlint", "ItemInHandTextured", "Stars"]
 
 [info] 
 copyright = '''
@@ -25,6 +25,13 @@ credits = '''
 # right-most subpack is enabled by default
 
 [[subpack]]
+define = "MULTILAYER_CLOUDS"
+materials = ["Clouds"]
+description = '''
+Multilayer Clouds
+'''
+
+[[subpack]]
 define = "EXTRA_MULTILAYER_CLOUDS"
 materials = ["Clouds"]
 description = '''
@@ -32,10 +39,10 @@ Extra Multilayer Clouds
 '''
 
 [[subpack]]
-define = "ENCHANTED_EFFECTS"
-materials = ["ActorGlint", "ItemInHandColor", "ItemInHandColorGlint", "ItemInHandTextured", "Stars"]
+define = "SOFT_CLOUDS"
+materials = ["Clouds"]
 description = '''
-Enchanted Effects
+Soft Clouds
 '''
 
 [[subpack]]
