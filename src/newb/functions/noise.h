@@ -61,20 +61,4 @@ vec3 permute(vec3 x)
 	return mod289(((x * 34.0) + 1.0) * x);
 }
 
-float fbm(vec2 x) {
-	float v = 0.0;
-	float a = 0.5;
-	vec2 shift = vec2(1.0);
-	mat2 rot = mat2(cos(0.5), sin(0.5), -sin(0.5), cos(0.50));
-	
-	for(int i=0;i < 10; ++i) {
-		v += a * noise2D(x);
-		//x += frameTimeCounter * 0.02;
-		//shift -= frameTimeCounter * 0.02;
-		x = rot * x * 2.0 + shift;
-		a *= 0.5;
-	}
-	return v;
-}
-
 #endif
