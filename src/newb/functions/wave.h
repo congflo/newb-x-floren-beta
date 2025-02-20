@@ -93,7 +93,7 @@ void nlWave(
   bool isFarmPlant = (bPos.y==0.9375) && (bPosC.x==0.25 ||  bPosC.y==0.25);
   bool shouldWave = ((isTreeLeaves || isPlants || isVines) && isColored) || (isFarmPlant && isTop);
 
-  float windStrength = lit.y*(noise1D(t*0.36) + rainFactor*0.4);
+  float windStrength = lit.y*(getnoise(vec2(1., 1.), t*0.36) + rainFactor*0.4);
 
   // darken farm plants bottom
   light *= isFarmPlant && !isTop ? 0.7 : 1.1;
@@ -127,13 +127,7 @@ void nlWave(
         rainFactor);
 
       //worldPos.y -= 1.0-sqrt(1.0-wave*wave);
-      #ifdef NL_PLANTS_WAVE_TYPE 1
       worldPos.xyz -= vec3(wave, wave*wave*0.5, wave);
-      #endif
-
-      #ifdef NL_PLANTS_WAVE_TYPE 2
-      worldPos.xyz += calcMove(vec3(wave), 0.0040, 0.0064, 0.0043, 0.0035, 0.0037, 0.0041, vec3(1.0,0.2,1.0), vec3(0.5,0.1,0.5))*1.4;
-      #endif
     }
   #endif
 
