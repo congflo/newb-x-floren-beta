@@ -33,9 +33,9 @@ jobs:
 
     - name: Upload artifact
       uses: actions/upload-artifact@v4
-        with:
-          name: newb-x-windows
-          path: ./build/pack-windows
+      with:
+        name: newb-x-windows
+        path: ./build/pack-windows
 
   android:
     runs-on: ubuntu-latest
