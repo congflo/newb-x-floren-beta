@@ -90,6 +90,7 @@
 #define NL_GLOW_LEAK 0.18 // [toggle] 0.08 subtle ~ 1.0 100% brightness of NL_GLOW_TEX
 
 /* Waving */
+#define NL_PLANTS_WAVE_TYPE 2
 #define NL_PLANTS_WAVE 0.062    // [toggle] 0.02 gentle ~ 0.4 violent
 #define NL_LANTERN_WAVE 0.16   // [toggle] 0.05 subtle ~ 0.4 large swing
 #define NL_WAVE_SPEED 1.35      // 0.5 slow wave ~ 5.0 very fast wave
