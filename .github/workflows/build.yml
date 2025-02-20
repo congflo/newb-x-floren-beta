@@ -19,14 +19,20 @@ jobs:
         key: env-files-win-laz
         path: |
           ${{ github.workspace }}/tool/data
-    - run: pip install -r requirements.txt
-    - run: |
+    - name: Install include tools
+      run: pip install -r requirements.txt
+
+    - name: Build shader
+      run: |
         .\build.bat setup
         .\build.bat pack -p windows --no-zip
-    - uses: actions/upload-artifact@v4
-      with:
-        name: newb-x-windows
-        path: ./build/pack-windows
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v4
+        with:
+          name: newb-x-windows
+          path: ./build/pack-windows
+
   android:
     runs-on: ubuntu-latest
     steps:
@@ -63,15 +69,18 @@ jobs:
         key: env-files-linux-laz
         path: |
           ${{ github.workspace }}/tool/data
-    - run: pip install -r requirements.txt
-    - run: |
+    - name: Install include tools
+      run: |
+        pip install -r requirements.txt
         wget https://github.com/mcbegamerxx954/material-updater/releases/download/v0.1.11-hotfix2/material-updater-x86_64-unknown-linux-gnu.tar.gz
         tar xvzf material-updater-x86_64-unknown-linux-gnu.tar.gz
-    - run: |
+    - name: Build and port shader
+      run: |
         ./build.sh setup
         ./build.sh pack -p ios
         ./material-updater -t v1-21-20 -o ./build/nxf-ios.zip ./build/pack-ios.zip
-    - uses: actions/upload-artifact@v4
+    - name: Upload artifact
+      uses: actions/upload-artifact@v4
       with:
         name: newb-x-ios
         path: ./build/nxf-ios.zip
