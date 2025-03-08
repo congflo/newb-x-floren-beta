@@ -46,8 +46,4 @@ float noise2D(vec2 u) {
   return n;
 }
 
-float getnoise(vec2 pos) {
-	return abs(fract(sin(dot(pos ,vec2(18.9898,28.633))) * 4378.5453));
-}
-
 #endif
