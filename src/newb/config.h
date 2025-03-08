@@ -67,9 +67,9 @@
 #define NL_CLOUDY_FOG 0.0         // [toggle] 0.0 subtle - 0.8 dense fog clouds
 
 /* Sky colors - zenith=top, horizon=bottom */
-#define NL_DAY_ZENITH_COL    vec3(0.40,0.72,0.97)
+#define NL_DAY_ZENITH_COL    vec3(0.24,0.47,0.71)
 #define NL_DAY_HORIZON_COL   vec3(0.76,0.85,0.91)
-#define NL_NIGHT_ZENITH_COL  vec3(0.02,0.11,0.27)
+#define NL_NIGHT_ZENITH_COL  vec3(0.00,0.10,0.18)
 #define NL_NIGHT_HORIZON_COL vec3(0.01,0.12,0.21)
 #define NL_RAIN_ZENITH_COL   vec3(0.12,0.12,0.12)
 #define NL_RAIN_HORIZON_COL  vec3(0.2,0.2,0.2)
@@ -132,7 +132,7 @@
 #define NL_CLOUD2_THICKNESS 2.32      // 0.5 slim ~ 5.0 fat
 #define NL_CLOUD2_RAIN_THICKNESS 3.5 // 0.5 slim ~ 5.0 fat
 #define NL_CLOUD2_STEPS 8            // 3 low quality ~ 16 high quality
-#define NL_CLOUD2_SCALE 0.015        // 0.003 large ~ 0.3 tiny
+#define NL_CLOUD2_SCALE 0.033        // 0.003 large ~ 0.3 tiny
 #define NL_CLOUD2_SHAPE 0.67          // 0.0 round ~ 1.0 box
 #define NL_CLOUD2_DENSITY 42.5       // 1.0 blurry ~ 100.0 sharp
 #define NL_CLOUD2_VELOCITY 1.68       // 0.0 static ~ 4.0 very fast
@@ -158,9 +158,9 @@
 #define NL_SUNMOON_ANGLE 35.0 // [toggle] 0.0 no tilt ~ 90.0 tilt of 90 degrees
 #define NL_SUNMOON_SIZE 0.67     // 0.3 tiny ~ 4.0 massive
 #define NL_SUN_BLOOM
-#define NL_SUN_BLOOM_COL vec3(0.98,0.96,0.98)/5.
+#define NL_SUN_BLOOM_COL vec3(1.00,0.83,0.70)/5.
 #define NL_MOON_BLOOM
-#define NL_MOON_BLOOM_COL vec3(0.86,0.96,0.98)/2.
+#define NL_MOON_BLOOM_COL vec3(0.86,0.96,0.98)/2.5
 
 /* Fake godrays during sunrise/sunset */
 //#define NL_GODRAY 0.8 // [toggle] 0.1 subtle ~ 0.8 strong
@@ -168,7 +168,7 @@
 /* Sky reflection */
 #define NL_GROUND_REFL 0.75       // [toggle] 0.2 slightly reflective ~ 1.0 fully reflect sky 
 #define NL_GROUND_RAIN_WETNESS 1.0 // 0.0 no wetness ~ 1.0 fully wet blocks when raining
-#define NL_GROUND_RAIN_PUDDLES 1.0 // 0.0 no puddles ~ 1.0 puddles
+#define NL_GROUND_RAIN_PUDDLES 0.5 // 0.0 no puddles ~ 1.0 puddles
 //#define NL_GROUND_AURORA_REFL    // [toggle] aurora reflection on ground
 
 /* Entity (Actor, ItemInHand) */
