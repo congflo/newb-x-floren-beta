@@ -41,7 +41,7 @@
 #define NL_TORCH_INTENSITY 2.25  // 0.5 weak ~ 3.0 bright
 #define NL_NIGHT_BRIGHTNESS 0.4 // 0.0 dark ~ 2.0 bright
 #define NL_CAVE_BRIGHTNESS 0.1  // 0.0 dark ~ 2.0 bright
-#define NL_SHADOW_INTENSITY 1.0 // 0.0 no shadow ~ 1.0 strong shadow
+#define NL_SHADOW_INTENSITY 0. // 0.0 no shadow ~ 1.0 strong shadow
 #define NL_BLINKING_TORCH     // [toggle] flickering light
 //#define NL_CLOUD_SHADOW       // [toggle] cloud shadow (simple clouds only)
 

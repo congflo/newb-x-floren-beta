@@ -8,13 +8,22 @@ SAMPLER2D_AUTOREG(s_SeasonsTexture);
 SAMPLER2D_AUTOREG(s_LightMapTexture);
 
 void main() {
+
+  vec4 diffuse;
+  vec4 color;
+  vec3 viewDir = normalize(v_worldPos);
+  vec3 dir = normalize(cross(dFdx(v_position), dFdy(v_position)));
+  float dx = max(dir.x, -dir.x);
+  float dy = max(dir.y, -dir.y);
+  floay dz = max(dir.z, -dir.z);
+
   #if defined(DEPTH_ONLY_OPAQUE) || defined(DEPTH_ONLY) || defined(INSTANCING)
     gl_FragColor = vec4(1.0,1.0,1.0,1.0);
     return;
   #endif
 
-  vec4 diffuse = texture2D(s_MatTexture, v_texcoord0);
-  vec4 color = v_color0;
+  diffuse = texture2D(s_MatTexture, v_texcoord0);
+  color = v_color0;
 
   #ifdef ALPHA_TEST
     if (diffuse.a < 0.6) {
@@ -34,6 +43,11 @@ void main() {
   lightTint = mix(lightTint.bbb, lightTint*lightTint, 0.35 + 0.65*v_lightmapUV.y*v_lightmapUV.y*v_lightmapUV.y);
 
   color.rgb *= lightTint;
+
+  float shadow = smoothstep(0.875, 0.86, pow(v_lightmapUV.y, 2.));
+
+  diffuse.rgb *= 1. - 0.4*shadow;
+  diffuse.rgb *= 1. - 0.4*dx;
 
   #if defined(TRANSPARENT) && !(defined(SEASONS) || defined(RENDER_AS_BILLBOARDS))
     if (v_extra.b > 0.9) {
