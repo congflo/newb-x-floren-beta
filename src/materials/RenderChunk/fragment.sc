@@ -18,12 +18,12 @@ void main() {
   float dz = max(dir.z, -dir.z);
 
   #if defined(DEPTH_ONLY_OPAQUE) || defined(DEPTH_ONLY) || defined(INSTANCING)
-    gl_FragColor = vec4(1.0,1.0,1.0,1.0);
-    return;
-  #endif
+    diffuse = vec4(1.0,1.0,1.0,1.0);
+    color = vec4(1.0,1.0,1.0,1.0);
+  #else
 
-  diffuse = texture2D(s_MatTexture, v_texcoord0);
-  color = v_color0;
+    diffuse = texture2D(s_MatTexture, v_texcoord0);
+  #endif
 
   #ifdef ALPHA_TEST
     if (diffuse.a < 0.6) {
