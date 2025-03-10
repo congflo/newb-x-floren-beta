@@ -106,6 +106,7 @@ void nlWave(
     #ifdef NL_EXTRA_PLANTS_WAVE
       extraPlantsFlag(shouldWave, uv0, isTop);
     #endif
+
     if (shouldWave) {
 
       float wave = NL_PLANTS_WAVE*windStrength;

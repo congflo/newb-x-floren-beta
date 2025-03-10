@@ -5,6 +5,7 @@
 #include "sky.h"
 #include "constants.h"
 #include "noise.h"
+#include "clouds.h"
 
 // sunlight tinting
 vec3 sunLightTint(float dayFactor, float rain, vec3 FOG_COLOR) {
@@ -78,7 +79,7 @@ vec3 nlLighting(
 
     // shadow cast by simple cloud
     #ifdef NL_CLOUD_SHADOW
-      shadow *= 1.0 - cloudNoise2D(wPos.xz*NL_CLOUD1_SCALE, t, env.rainFactor);
+      shadow *= smoothstep(0.6, 0.1, cloudNoise2D(2.0*wPos.xz*NL_CLOUD1_SCALE, t, env.rainFactor));
     #endif
 
     // direct light from top
@@ -105,11 +106,11 @@ vec3 nlLighting(
 
 void nlUnderwaterLighting(inout vec3 light, inout vec3 pos, vec2 lit, vec2 uv1, vec3 tiledCpos, vec3 cPos, highp float t, vec3 horizonCol) {
   if (uv1.y < 0.9) {
-    float caustics = disp(tiledCpos*vec3(1.0,0.1,1.0), t);
-    caustics += (1.0 + sin(t + (cPos.x+cPos.z)*NL_CONST_PI_HALF));
-    light += NL_UNDERWATER_BRIGHTNESS + NL_CAUSTIC_INTENSITY*caustics*(0.1 + lit.y + lit.x*0.7);
+    float caustics = disp(tiledCpos, NL_WATER_WAVE_SPEED*t);
+    caustics *= 3.0*caustics;
+    light += NL_UNDERWATER_BRIGHTNESS + NL_CAUSTIC_INTENSITY*caustics*(0.15 + lit.y + lit.x*0.7);
   }
-  light *= mix(normalize(horizonCol), vec3(1.0,1.0,1.0), lit.y*0.6);
+  light *= mix(normalize(horizonCol), vec3_splat(0.6), lit.y*0.6);
   #ifdef NL_UNDERWATER_WAVE
     pos.xy += NL_UNDERWATER_WAVE*min(0.05*pos.z,0.6)*sin(t*1.2 + dot(cPos,vec3_splat(NL_CONST_PI_HALF)));
   #endif
@@ -161,6 +162,17 @@ float nlEntityEdgeHighlight(vec4 edgemap) {
 vec4 nlEntityEdgeHighlightPreprocess(vec2 texcoord) {
   vec4 edgeMap = fract(vec4(texcoord*128.0, texcoord*256.0));
   return 2.0*step(edgeMap, vec4_splat(0.5)) - 1.0;
+}
+
+vec3 nlLavaNoise(vec3 tiledCpos, float t) {
+  t *=  NL_LAVA_NOISE_SPEED;
+  float n = fastVoronoi2(1.12*tiledCpos.xz + t, 1.8);
+  n *= fastVoronoi2(4.48*tiledCpos.xz + t, 1.5);
+  n = 1.0 - n*n*n;
+  n = 1.0 - n*n;
+  float n2 = n*n;
+  n2 *= n2;
+  return vec3(n, n2, n2);
 }
 
 #endif

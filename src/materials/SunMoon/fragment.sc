@@ -112,7 +112,6 @@ void main() {
     
     #ifdef NL_LENS_FLARE
     color.rgb += lensflare(v_pos.xz, v_uvPos.xy);
-    color.rgb = cc(color.rgb, 0.5, 0.1) * 0.5;
     #endif
     
     if (max(abs(v_pos.x),abs(v_pos.z)) < 0.5/10.0) {
@@ -123,11 +122,7 @@ void main() {
 
     float tr = 1.0 - SunMoonColor.a;
     color.a = 1.0 - tr*tr*tr;
-    
-    #ifdef NL_CUBEMAP_SUNMOON
-    color.a *= 0.0;
-    #endif
-    
+
     gl_FragColor = color;
   #else
     gl_FragColor = vec4(0.0, 0.0, 0.0, 0.0);
