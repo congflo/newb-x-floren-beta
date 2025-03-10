@@ -150,16 +150,16 @@
 /* Realistic cloud settings */
 #define NL_CLOUD3_SCALE vec2(0.03, 0.03) // 0.003 large ~ 1.0 tiny
 #define NL_CLOUD3_SPEED 0.005            // 0.0 static ~ 4.0 fast moving
-#define NL_CLOUD3_SHADOW 0.1             // 0.1 subtle ~ 1.0 dark
+#define NL_CLOUD3_SHADOW 0.45             // 0.1 subtle ~ 1.0 dark
 #define NL_CLOUD3_SHADOW_OFFSET 0.3      // 0.05 minimal ~ 1.0 large
 
 /* Aurora settings */
-#define NL_AURORA 1.2           // [toggle] 0.4 dim ~ 4.0 very bright
+//#define NL_AURORA 1.2           // [toggle] 0.4 dim ~ 4.0 very bright
 #define NL_AURORA_VELOCITY 0.03 // 0.0 static ~ 0.3 very fast
 #define NL_AURORA_SCALE 0.04    // 0.002 large ~ 0.4 tiny
 #define NL_AURORA_WIDTH 0.18    // 0.04 thin line ~ 0.4 thick lines
 #define NL_AURORA_COL1 vec3(0.1,1.0,0.0)
-#define NL_AURORA_COL2 vec3(0.1,0.0,1.0)
+#define NL_AURORA_COL2 vec3(0.1,1.0,0.0)
 
 /* Shooting star */
 #define NL_SHOOTING_STAR 10.0        // [toggle] 0.2 dim ~ 1.0 bright
