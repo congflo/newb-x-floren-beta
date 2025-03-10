@@ -30,7 +30,7 @@ credits = '''
 
 [[subpack]]
 define = "ROUNDED_CLOUDS"
-materials = ["Clouds, RenderChunk"]
+materials = ["Clouds", "RenderChunk"]
 description = '''
 Rounded Clouds
 '''
@@ -44,9 +44,9 @@ Box Clouds
 
 [[subpack]]
 define = "SOFT_CLOUDS"
-materials = ["Clouds, RenderChunk"]
+materials = ["Clouds", "RenderChunk"]
 description = '''
-Chunk loading animation
+Soft Clouds
 '''
 
 [[subpack]]
