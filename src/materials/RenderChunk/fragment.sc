@@ -15,7 +15,7 @@ void main() {
   vec3 dir = normalize(cross(dFdx(v_position), dFdy(v_position)));
   float dx = max(dir.x, -dir.x);
   float dy = max(dir.y, -dir.y);
-  floay dz = max(dir.z, -dir.z);
+  float dz = max(dir.z, -dir.z);
 
   #if defined(DEPTH_ONLY_OPAQUE) || defined(DEPTH_ONLY) || defined(INSTANCING)
     gl_FragColor = vec4(1.0,1.0,1.0,1.0);
