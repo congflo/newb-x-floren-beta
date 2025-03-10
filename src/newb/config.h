@@ -236,10 +236,6 @@
   #undef NL_RAIN_MIST_OPACITY
 #endif
 
-#ifdef CHUNK_ANIM
-  #define NL_CHUNK_LOAD_ANIM 100.0
-#endif
-
 #ifdef ROUNDED_CLOUDS
   #undef NL_CLOUD_TYPE
   #define NL_CLOUD_TYPE 2

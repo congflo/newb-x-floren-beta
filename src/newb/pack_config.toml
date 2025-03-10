@@ -3,7 +3,7 @@ version = [0, 0, 1]
 min_supported_mc_version = [1, 21, 20]
 description = '''
 §c%w
-§7- An enchanced vanilla shader for Minecraft!
+§7- Make it because miss ex..
 %v
 §3https://devendrn.github.io/newb-shader/
 ''' # %w = patch warning, %v = version
@@ -30,7 +30,7 @@ credits = '''
 
 [[subpack]]
 define = "ROUNDED_CLOUDS"
-materials = ["Clouds"]
+materials = ["Clouds, RenderChunk"]
 description = '''
 Rounded Clouds
 '''
@@ -43,8 +43,8 @@ Box Clouds
 '''
 
 [[subpack]]
-define = "CHUNK_ANIM"
-materials = ["RenderChunk"]
+define = "SOFT_CLOUDS"
+materials = ["Clouds, RenderChunk"]
 description = '''
 Chunk loading animation
 '''
